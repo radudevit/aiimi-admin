@@ -1,0 +1,22 @@
+.input-field {
+  border: var(--border);
+  border-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+
+  &.input-group {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &.input-focus {
+    border-color: var(--primary-color);
+  }
+
+  input {
+    border: none;
+    outline: none;
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    width: 100%;
+  }
+}

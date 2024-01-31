@@ -1,0 +1,9 @@
+<div class="input-field" [class]="{'input-group': group, 'input-focus': isActive}">
+  <input [type]="type"
+         [formControl]="formControl"
+         [placeholder]="placeholder"
+         (focus)="inputFocus()"
+         (blur)="inputBlur()" />
+
+  <ng-content />
+</div>

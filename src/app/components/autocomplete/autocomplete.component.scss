@@ -1,0 +1,26 @@
+.autocomplete-container {
+  position: relative;
+  background: white;
+  border-radius: var(--border-radius);
+
+  .suggestions {
+    list-style: none;
+    border: var(--border);
+    border-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    position: absolute;
+    width: 100%;
+    background: white;
+    margin-top: 8px;
+
+    .suggestion {
+      padding: var(--padding);
+      cursor: pointer;
+      border-radius: var(--border-radius);
+
+      &:hover {
+        background: rgba(119, 119, 119, 0.5);
+      }
+    }
+  }
+}

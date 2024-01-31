@@ -1,0 +1,50 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
+  height: 100%;
+  padding: 16px 0;
+
+  .users-container {
+    height: calc(100% - 99px);
+    min-height: 400px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 8px 0;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-content: start;
+
+    .empty-message {
+      color: white;
+    }
+  }
+
+  .create-user-container {
+    text-align: center;
+    position: relative;
+
+    app-user-form {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 55px;
+
+      .form-row {
+        display: flex;
+        justify-content: space-between;
+        gap: var(--padding);
+
+        app-input {
+          width: 100%;
+        }
+      }
+
+      app-button {
+        align-self: center;
+      }
+    }
+  }
+}

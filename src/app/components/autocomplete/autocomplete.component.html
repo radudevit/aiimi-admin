@@ -1,0 +1,19 @@
+<div class="autocomplete-container">
+  <app-input [placeholder]="placeholder" [formControl]="searchControl" (focus)="active = true">
+    <app-button [disabled]="!searchControl.value"
+                label="Go!"
+                styles="border-top-left-radius: 0; border-bottom-left-radius: 0;"
+                (click)="submit()" />
+  </app-input>
+
+  @if (active && filteredItems.length) {
+    <ul class="suggestions">
+      @for (item of filteredItems; track item.email) {
+        <li [innerHTML]="(item.firstName + ' ' + item.lastName) | highlight: searchControl.value"
+            class="suggestion"
+            (click)="suggestionClick(item)">
+        </li>
+      }
+    </ul>
+  }
+</div>
